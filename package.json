@@ -1,0 +1,28 @@
+{
+  "name": "mytemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aleksei Gomeniuk",
+  "license": "ISC",
+  "devDependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.3",
+    "browser-sync": "^2.27.10",
+    "cleave.js": "^1.6.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "jshint": "^2.13.6",
+    "sass": "^1.56.1"
+  },
+  "dependencies": {}
+}
