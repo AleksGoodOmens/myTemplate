@@ -1,0 +1,25 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
+}
+
+.logo {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	font-weight: bold;
+	font-size: 25px;
+	position: relative;
+	padding-right: 1rem;
+	div {
+		position: absolute;
+		background-color: var(--accent-bg);
+		border-radius: 50%;
+		transform: rotate(-25deg);
+		font-size: 15px;
+		padding: 3px;
+		right: 0;
+		top: 1rem;
+	}
+}

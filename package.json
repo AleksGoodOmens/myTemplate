@@ -1,77 +1,69 @@
 {
-  "name": "gulp-pug-template",
-  "version": "1.2.5",
-  "description": "simple pug+scss template",
-  "author": "Alexey Kozyutenko",
-  "license": "MIT",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "cross-env NODE_ENV=development gulp development",
-    "build": "cross-env NODE_ENV=production gulp production",
-    "scripts": "cross-env NODE_ENV=production gulp scripts"
-  },
-  "browserslist": [
-    "> 5%",
-    "last 2 version"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Apnoea/gulp-pug-template.git"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.4",
-    "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.14",
-    "cross-env": "^7.0.3",
-    "del": "^6.0.0",
-    "eslint": "^7.28.0",
-    "eslint-config-htmlacademy": "^4.0.1",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-sonarjs": "^0.8.0-125",
-    "eslint-plugin-unicorn": "^33.0.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-cached": "^1.1.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-dependents": "^1.2.5",
-    "gulp-eslint7": "^0.3.1",
-    "gulp-filter": "^7.0.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-pug-linter": "^1.5.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-stylelint": "^13.0.0",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-w3c-html-validator": "2.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "pug": "^3.0.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-htmlacademy": "^0.1.7",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-config-standard-scss": "^1.1.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0",
-    "svg4everybody": "^2.1.9",
-    "webpack": "^4.44.1",
-    "webpack-stream": "^6.1.2"
-  },
-  "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
-    "inputmask": "^5.0.6",
-    "jquery": "^3.6.0",
-    "js-datepicker": "^5.18.0",
-    "normalize.css": "^8.0.1",
-    "nouislider": "^15.1.1",
-    "parsleyjs": "^2.9.2",
-    "select2": "^4.0.13",
-    "swiper": "^6.7.0",
-    "tooltipster": "^4.2.8"
-  }
+	"name": "Simple Starter",
+	"version": "1.0.0",
+	"description": "My starter to create websites on html scss",
+	"main": "gulpfile.js",
+	"type": "module",
+	"scripts": {
+		"dev": "gulp",
+		"svgIcons": "gulp svgIcons"
+	},
+	"author": "ALeks Gomeniuk",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.23.9",
+		"@babel/preset-env": "^7.23.9",
+		"browser-sync": "^3.0.2",
+		"css-loader": "^6.10.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^9.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-changed": "^5.0.2",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-file-include": "^2.3.0",
+		"gulp-fonter": "^0.3.0",
+		"gulp-fonter-2": "^0.3.0",
+		"gulp-group-css-media-queries": "^1.2.2",
+		"gulp-htmlclean": "^2.7.22",
+		"gulp-if": "^3.0.0",
+		"gulp-imagemin": "^9.0.0",
+		"gulp-newer": "^1.4.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-replace": "^1.1.4",
+		"gulp-sass": "^5.1.0",
+		"gulp-sass-glob": "^1.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svg-sprites": "^4.1.2",
+		"gulp-ttf2woff2": "^4.0.1",
+		"gulp-version-number": "^0.2.4",
+		"gulp-webp": "^5.0.0",
+		"gulp-webp-html-nosvg": "^1.1.1",
+		"gulp-webpcss": "^1.1.1",
+		"sass": "^1.70.0",
+		"style-loader": "^3.3.4",
+		"webp-converter": "^2.2.3",
+		"webpack": "^5.90.1",
+		"webpack-stream": "^7.0.0"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"browsersList": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version",
+			"last 1 ie version"
+		]
+	}
 }
