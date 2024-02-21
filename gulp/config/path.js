@@ -5,6 +5,7 @@ const buildFolder = './dist';
 const srcFolder = './src';
 
 export const path = {
+	ftp: 'test',
 	clean: buildFolder,
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,

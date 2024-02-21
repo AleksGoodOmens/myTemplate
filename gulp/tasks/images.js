@@ -6,17 +6,20 @@ export const images = () => {
 		.src(app.path.src.images)
 		.pipe(app.plugins.plumber(app.plugins.notify.onError(app.plugins.notifySettings('IMAGES'))))
 		.pipe(app.plugins.newer(app.path.build.images))
-		.pipe(webp())
-		.pipe(app.gulp.dest(app.path.build.images))
-		.pipe(app.gulp.src(app.path.src.images))
-		.pipe(app.plugins.newer(app.path.build.images))
+		.pipe(app.plugins.if(app.isBuild, webp()))
+		.pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
+		.pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.images)))
+		.pipe(app.plugins.if(app.isBuild, app.plugins.newer(app.path.build.images)))
 		.pipe(
-			imagemin({
-				progressive: true,
-				svgoPlugins: [{ removeViewBox: false }],
-				interLaced: true,
-				opimizationLevel: 3, // 0 to 7
-			})
+			app.plugins.if(
+				app.isBuild,
+				imagemin({
+					progressive: true,
+					svgoPlugins: [{ removeViewBox: false }],
+					interLaced: true,
+					opimizationLevel: 3, // 0 to 7
+				})
+			)
 		)
 		.pipe(app.gulp.dest(app.path.build.images))
 		.pipe(app.gulp.src(app.path.src.svg))

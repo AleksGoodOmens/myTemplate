@@ -8,6 +8,8 @@ import { plugins } from './gulp/config/plugins.js';
 
 // creating global variable
 global.app = {
+	isBuild: process.argv.includes('--build'),
+	isDev: !process.argv.includes('--build'),
 	path: path,
 	gulp: gulp,
 	plugins: plugins,
@@ -23,6 +25,8 @@ import { js } from './gulp/tasks/js.js';
 import { images } from './gulp/tasks/images.js';
 import { otfToTtf, ttfToWoff, ttfToWoff2, fontsStyle } from './gulp/tasks/fonts.js';
 import { svgIcons } from './gulp/tasks/svgIcons.js';
+import { zipDist } from './gulp/tasks/zip.js';
+import { ftp } from './gulp/tasks/ftp.js';
 
 // watchers  (dest, function)
 function watcher() {
@@ -45,7 +49,15 @@ const serverWatcher = gulp.parallel(watcher, server);
 
 // scenario builder
 const dev = gulp.series(reset, fonts, mainTasks, serverWatcher);
+const build = gulp.series(reset, mainTasks, server);
+const deployZip = gulp.series(zipDist);
+const deployToFtp = gulp.series(ftp);
+
+// export scenario
+export { dev };
+export { build };
+export { deployZip };
+export { deployToFtp };
 
 // scenario tasks
 gulp.task('default', dev);
-gulp.task('fonts', gulp.series(ttfToWoff)); // test

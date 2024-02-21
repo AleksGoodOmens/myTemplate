@@ -7,7 +7,7 @@ import rename from 'gulp-rename';
 import { notifySettings } from '../config/notifySettings.js';
 import newer from 'gulp-newer';
 import fs from 'fs';
-import ifPlugin from "gulp-is"
+import ifPlugin from 'gulp-if';
 
 // plugins export
 export const plugins = {
@@ -19,5 +19,5 @@ export const plugins = {
 	notifySettings,
 	newer,
 	fs,
-	if: ifPlugin
+	if: ifPlugin,
 };

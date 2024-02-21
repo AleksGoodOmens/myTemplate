@@ -6,7 +6,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "gulp",
-		"svgIcons": "gulp svgIcons"
+		"svgIcons": "gulp svgIcons",
+		"build": "gulp build --build",
+		"zip": "gulp deployZip --build",
+		"deploy": "gulp deployToFtp --build"
 	},
 	"author": "ALeks Gomeniuk",
 	"license": "ISC",
@@ -21,8 +24,8 @@
 		"gulp-changed": "^5.0.2",
 		"gulp-clean": "^0.4.0",
 		"gulp-clean-css": "^4.3.0",
+		"gulp-debug": "^5.0.1",
 		"gulp-file-include": "^2.3.0",
-		"gulp-fonter": "^0.3.0",
 		"gulp-fonter-2": "^0.3.0",
 		"gulp-group-css-media-queries": "^1.2.2",
 		"gulp-htmlclean": "^2.7.22",
@@ -38,12 +41,15 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-svg-sprites": "^4.1.2",
 		"gulp-ttf2woff2": "^4.0.1",
+		"gulp-util": "^3.0.8",
 		"gulp-version-number": "^0.2.4",
 		"gulp-webp": "^5.0.0",
 		"gulp-webp-html-nosvg": "^1.1.1",
 		"gulp-webpcss": "^1.1.1",
+		"gulp-zip": "^6.0.0",
 		"sass": "^1.70.0",
 		"style-loader": "^3.3.4",
+		"vinyl-ftp": "^0.6.1",
 		"webp-converter": "^2.2.3",
 		"webpack": "^5.90.1",
 		"webpack-stream": "^7.0.0"
